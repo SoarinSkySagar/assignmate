@@ -1,5 +1,5 @@
 import React from 'react';
-import "../tailwind.css";
+import "tailwindcss/tailwind.css";
 
 export default function HomeHeader() {
   return (
