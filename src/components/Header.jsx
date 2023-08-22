@@ -1,6 +1,8 @@
 import React from 'react';
+import "bulma/css/bulma.min.css";
 import './../App.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+
 
 export default function Header() {
 
@@ -39,7 +41,7 @@ export default function Header() {
       </a>
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button bg-red-500 text-white border-red-500" href='/'>
+          <a className="button signup" href='/'>
             <strong>Sign up</strong>
           </a>
           <a className="button is-light" href='/'>

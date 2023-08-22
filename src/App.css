@@ -117,3 +117,9 @@ header h1 {
   display: block;
   object-fit:cover;
 }
+
+.signup {
+  border-color: #EF4444 !important;
+  background-color: #EF4444 !important;
+  color: white !important;
+}
