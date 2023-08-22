@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,8 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +36,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar {
+  height: 4rem;
+  padding: 0;
+}
+
+.navbar-brand, .navbar-menu {
+  height: 100%;
+  cursor: pointer;
+  background-color: #1F1F1E;
+}
+
+#logo {
+  height: 100%;
+  width: auto;
+}
+
+.link {
+  color: whitesmoke !important;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.link:hover {
+  background-color: #EF4444 !important;
+}
+
+header{
+  width: 96vw;
+  position: relative;
+  top: 5rem;
+  left: 2rem;
+  overflow: hidden;
+  height: 90vh;
+  margin-bottom: 5rem;
+}
+
+header p, header a {
+  color: white !important;
+  font-size: 1.4rem;
+}
+
+header h1 {
+  line-height: 1.2;
+  font-size: 4rem;
+  color: white !important;
+  font-weight: 900;
+}
+
+.btn {
+  display: inline-block; 
+  background: #fff; 
+  padding: 1rem 2rem; 
+  border: 1px solid transparent; 
+  font-weight: 500; 
+  transition: all 400ms ease;
+  border-radius: 2rem;
+  /* height: 1rem; */
+}
+
+.btn-primary{
+  background: #EF4444;
+  color: #fff;
+}
+
+.header-content {
+  text-align: left; 
+}
+
+.header {
+  top: 0;
+}
+
+.header-img {
+  height: 95vh;
+  width: 100%;
+  display: block;
+  object-fit:cover;
 }
