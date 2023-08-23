@@ -1,14 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
-import "tailwindcss/tailwind.css"
-
+import "tailwindcss/tailwind.css";
+import reviews from './reviews.json';
+import ReviewCards from './ReviewCards';
 
 export default function HomeCarousel() {
+  
+    const reviewArr = JSON.parse(JSON.stringify(reviews));
+    const data = reviewArr.reviews;
+
     var settings = {
         dots: false,
         infinite: true,
-        speed: 500,
-        slidesToShow: 1,
+        speed: 400,
+        slidesToShow: 3,
         slidesToScroll: 1,
       };
       return (
@@ -27,24 +32,14 @@ export default function HomeCarousel() {
         <h1 className='text-7xl mb-20 text-white font-extrabold'>Our Happy Customers :D</h1>
         <Slider {...settings}>
         
-          <div>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </div>
-          <div>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </div>
-          <div>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </div>
-          <div>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </div>
-          <div>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </div>
-          <divs>
-            <img src="assignmate-logo.jpg" className='mx-auto' alt="" />
-          </divs>
+        {data.map((review) => (
+            <ReviewCards
+            name={review.name}
+            description={review.description}
+            imageLink={review.image}
+            />
+        ))}
+
         </Slider> 
         </div>
       )
